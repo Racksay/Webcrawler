@@ -31,41 +31,9 @@ namespace Webcrawler
             //this.myWorker.WorkerSupportsCancellation = true;
         }
 
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
-
-            var webcrwaler = new WebCrawler("http://www.google.com");
-
-            //var arrObjects = new object[] { 100 };
-            //if (!this.myWorker.IsBusy)
-            //{
-            //    this.button1.IsEnabled = false;
-            //    this.myWorker.RunWorkerAsync(arrObjects);
-            //}
-        }
-
-
-        private void myWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            //BackgroundWorker sendingWorker = (BackgroundWorker)sender;
-
-            //if (!sendingWorker.CancellationPending)
-            //{
-            //    var webCrawler = new WebCrawler("http://www.google.com");
-            //}
-        }
-
-
-        private void myWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        private void myWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            throw new NotImplementedException();
+            new WebCrawler(this.textbos.Text);
         }
     }
 }

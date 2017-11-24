@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:Webcrawler"
         mc:Ignorable="d"
         Title="Webcrawler 1.0 by Edvin" Height="350" Width="525">
-    <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="525" Height="320" RenderTransformOrigin="0.5,0.5" Margin="0,0,-8,-1" Click="Button_Click_1">
-    </Button>
+    <Grid HorizontalAlignment="Left" Height="340" VerticalAlignment="Top" Width="515" Margin="0,0,0,-21">
+        <Button x:Name="button1" Content="Crawl" HorizontalAlignment="Left" Margin="210,253,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <TextBox x:Name="textbos" HorizontalAlignment="Left" Height="23" Margin="190,225,0,0" TextWrapping="Wrap" Text="http://google.com" VerticalAlignment="Top" Width="120"/>
+    </Grid>
 </Window>

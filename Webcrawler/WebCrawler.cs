@@ -49,18 +49,8 @@ namespace Webcrawler
         }
 
 
-        public List<string> FilenameFilters = new List<string>
-        {
-            ".dtd",
-            ".js",
-            ".png",
-            ".jpg"
-        };
-
-
         public void Crawl()
         {
-            this.pagesVisited.Add(this.PageToRead);
             while (this.Crawling)
             {
                 GetHtmlDocuments();               
@@ -88,7 +78,7 @@ namespace Webcrawler
                             var data = reader.ReadToEnd();
                             stack.Push(data);
 
-                            //Console.WriteLine("Thread {0} : {1}", Thread.CurrentThread.ManagedThreadId, page);
+                            Console.WriteLine("Thread {0} : {1}", Thread.CurrentThread.ManagedThreadId, page);
                         }
                     }
                 }
@@ -101,6 +91,16 @@ namespace Webcrawler
             this.pagesVisited.UnionWith(this.pagesToVisit);
             this.pagesToVisit.Clear();
             GetNewLinks(stack);
+            if (this.pagesToVisit.Count == 0)
+            {
+                this.Crawling = false;
+                Console.WriteLine("No more pages to crawl on :(");
+                Console.WriteLine("I found " + this.pagesVisited.Count + " pages and they are");
+                foreach (var page in this.pagesVisited)
+                {
+                    Console.WriteLine(page);
+                }
+            }
         }
 
 
@@ -122,55 +122,5 @@ namespace Webcrawler
             stopwatch.Stop();
             Console.WriteLine("GetNewLinksTook: " + stopwatch.ElapsedMilliseconds + "ms");
         }
-
-
-        public string GetHtmlFromPage(string url)
-        {
-            try
-            {
-                var httpClient = new WebClient();
-                var response = httpClient.OpenRead(url);
-                if (!response.CanRead)
-                    return "";
-                var content = new StreamReader(response, Encoding.UTF8);
-
-                var str = content.ReadToEnd();
-                return str;
-            }
-            catch (WebException exception)
-            {
-                Console.WriteLine(exception);
-                return "";
-            }
-        }
-
-
-        //this.pagesVisited.Add(this.PageToRead);
-        //Console.WriteLine("Reading Page: " + this.PageToRead);
-
-        //var stream = GetHtmlFromPage(this.PageToRead);
-
-        //const string initialUrl = @"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)";
-        //var regex = new Regex(initialUrl, RegexOptions.IgnorePatternWhitespace | RegexOptions.IgnoreCase);
-        //var matches = regex.Matches(stream).Cast<Match>().Select(m => m.Value).ToList();
-
-        //foreach (var match in matches)
-        //{
-        //    foreach (var filter in this.FilenameFilters)
-        //    {
-        //        if (!match.Contains(filter))
-        //        {
-        //            if (this.pagesVisited.Contains(match)) continue;
-        //            this.pagesToVisit.Add(match);
-        //        }
-        //    }
-        //}
-
-        //var last = this.pagesToVisit.First();
-        //if (!this.pagesVisited.Contains(last))
-        //{
-        //    this.PageToRead = last;
-        //    this.pagesToVisit.Remove(last);
-        //}
     }
 }
