@@ -1,0 +1,17 @@
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\bin\Release\Webcrawler.exe.config
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\bin\Release\Webcrawler.exe
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\bin\Release\Webcrawler.pdb
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\bin\Release\HtmlAgilityPack.dll
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\bin\Release\HtmlAgilityPack.pdb
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\bin\Release\HtmlAgilityPack.xml
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\MainWindow.g.cs
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\App.g.cs
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler_MarkupCompile.cache
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler_MarkupCompile.lref
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\MainWindow.baml
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler.g.resources
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler.Properties.Resources.resources
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler.csproj.GenerateResource.Cache
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler.csproj.CoreCompileInputs.cache
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler.exe
+D:\InnovationDays\InnovationDay24-11\Webcrawler\Webcrawler\obj\Release\Webcrawler.pdb
